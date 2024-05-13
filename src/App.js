@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// import 'tailwindcss/tailwind.css';
+import React from "react";
+import Pagination from "./Pagination";
+import Search from "./Search";
+import Stories from "./Stories";
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <section className="flex flex-col gap-10 bg-teal-600 main-container items-center">
+      <div className='  flex flex-col gap-5 items-center text-white text-5xl font-semibold pt-10'>
+        Tech blog
+      </div>
+      <Search />
+      <Pagination />
+      <Stories />
+      {/* <StickyDemo /> */}
+    </section>
+  )
 }
 
-export default App;
+export default App
+
