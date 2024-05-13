@@ -24,25 +24,25 @@ export const reducer = (state, action) => {
                 query: action.payload,
             }
         case "PREV_PAGE":
-            let prevPagNum = state.page;
+            let prevPageNum = state.page;
 
-            if (prevPagNum <= 0) {
-                prevPagNum = 0
+            if (prevPageNum <= 0) {
+                prevPageNum = 0
             } else {
-                prevPagNum = prevPagNum - 1
+                prevPageNum = prevPageNum - 1
             }
             return {
                 ...state,
-                page: prevPagNum,
+                page: prevPageNum,
             }
         case "NEXT_PAGE":
-            let nextPagNum = state.page + 1
-            if (nextPagNum >= state.nbPages) {
-                nextPagNum = 0
+            let nextPageNum = state.page + 1
+            if (nextPageNum >= state.nbPages) {
+                nextPageNum = 0
             }
             return {
                 ...state,
-                page: nextPagNum,
+                page: nextPageNum,
             }
         default:
             return state;
