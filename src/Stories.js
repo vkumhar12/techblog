@@ -8,6 +8,8 @@ import HatchComponent from "./Loader";
 
 const ExampleComponent = () => {
     const { hits, isLoading, removePost } = useGlobalContext();
+    console.log("Hits :", hits);
+    console.log("isLoading : ", isLoading)
 
     return (
         isLoading ? (
